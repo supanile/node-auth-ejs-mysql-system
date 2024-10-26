@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Modern Login System</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">
+                <a href="/">Node Auth</a>
+            </div>
+
+            <ul class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/logout" class="logout-btn">Sign Out</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="welcome-section">
+            <% if (typeof user !== 'undefined') { %>
+                <h1>Dashboard</h1>
+                <p>Manage your account and access your personal information.</p>
+                
+                <div class="user-info">
+                    <p><strong>Name:</strong> <%= user.name %></p>
+                    <p><strong>Email:</strong> <%= user.email %></p>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>

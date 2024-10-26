@@ -1,0 +1,141 @@
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --danger-color: #dc2626;
+    --success-color: #16a34a;
+    --text-light: #f8fafc;
+    --text-dark: #1e293b;
+    --bg-light: #ffffff;
+    --bg-dark: #0f172a;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', system-ui, -apple-system, sans-serif;
+  }
+  
+  body {
+    background-color: #f1f5f9;
+    min-height: 100vh;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  nav {
+    background-color: var(--bg-light);
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  nav .nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo a {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .logo a:hover {
+    color: var(--secondary-color);
+  }
+  
+  .menu {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    list-style: none;
+  }
+  
+  .menu li a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    transition: all 0.2s;
+  }
+  
+  .menu li a:hover {
+    background-color: #f1f5f9;
+  }
+  
+  .menu li a.login-btn {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+  }
+  
+  .menu li a.login-btn:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .menu li a.logout-btn {
+    background-color: var(--danger-color);
+    color: var(--text-light);
+  }
+  
+  .menu li a.logout-btn:hover {
+    background-color: #b91c1c;
+  }
+  
+  .welcome-section {
+    background-color: var(--bg-light);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  }
+  
+  .welcome-section h1 {
+    color: var(--text-dark);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .welcome-section p {
+    color: #64748b;
+    line-height: 1.6;
+  }
+  
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e2e8f0;
+  }
+  
+  @media (max-width: 640px) {
+    nav .nav-content {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .menu {
+      flex-direction: column;
+      width: 100%;
+    }
+    
+    .menu li a {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  }
